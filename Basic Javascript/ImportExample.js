@@ -1,29 +1,5 @@
-var mod= require('E:/WorkSpace/Vscode/FileToExport');
-console.log(mod);
-console.log("Value of Pi "+mod.Pi);
-//let ChocoChip=new mod.Choclate("choclate","brown");
-//console.log("Choclate flaour:"+ ChocoChip.flavour," Choclate color: "+ChocoChip.color);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import  {pi,area,Choclate} from 'E:/WorkSpace/Vscode/CMPE\ 273/Basic\ Javascript/FileToExport';
+console.log("Value of Pi "+pi);
+console.log("Area" + area(4));
+let ChocoChip=new Choclate("choclate","brown");
+console.log("Choclate flaour:"+ ChocoChip.flavour," Choclate color: "+ChocoChip.color);

@@ -9,5 +9,3 @@ class Choclate{
          this.color=color
      }
 };
-
-module.pi = pi;
