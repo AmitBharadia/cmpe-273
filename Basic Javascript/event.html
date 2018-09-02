@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <head>
+        <Script>
+         let arr=["Karine Overbey","Denae Dicken","Britni Fox","Meg Book","Tiffanie Miskell","Hermila Virgin","Roderick Bodner","Katrice Gist"  ,"Dede Gatts"]
+         window.onload=(()=>alert("Welcome! In order to win prize fill the details!"))();    
+         function suggestMe(){
+             console.log("Here")
+             let names="";
+             let target=document.getElementById('name').value;
+             console.log(target)
+             for(const name of arr){
+                if(name.includes(target) && target.length>2){
+                    names=names+name+',';
+                }
+             }
+            if(names!=""){
+                alert("Are you " +names +" ?");
+            }
+
+         }
+
+         function guideThem(){
+            alert("That's where you write your name.");
+         }
+        </Script>
+    </head>
+    <body>
+        <form>
+            <label id="labelName" onmouseover="guideThem()">Name:</label><input type="text" id="name" oninput="suggestMe()">
+        </form>
+    </body>
+</html>

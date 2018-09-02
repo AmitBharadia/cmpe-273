@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <head>
+        <script>
+            function findMyLocaton(){
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                }else{
+                    console.log("Oops ypu browser does not support this..")
+                }
+                function showPosition(position){
+                    
+                    lat=position.coords.latitude;
+                    log=position.coords.longitude;
+                    fetch('http://maps.googleapis.com/maps/api/geocode/json?latlng='+lat+','+log+'&sensor=true',
+                    ).then((response)=>{     
+                        //var responseObject=JSON.parse(response);
+                        return response.json();
+                    }).then((myjson)=>{
+                        document.getElementById("idLoc").innerHTML="My location : "+ myjson.results[0].formatted_address;
+                    });
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="findMyLocaton()">Find your location..</button>
+        <div  id="idLoc"></div>
+    </body>
+
+</html

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <head>
+        <script>
+            function addMe(){
+                if(typeof(Storage) !=undefined){
+                    if(localStorage.listOfFriends){
+                        localStorage.listOfFriends=String(localStorage.listOfFriends)+", "+document.getElementById('name').value;
+                    }else{
+                        localStorage.listOfFriends=document.getElementById('name').value;
+                    }
+                }else{
+                    console.log("No local storage available on browser");
+                }
+            }  
+        </script>
+    </head>
+    <body>
+        <form method="get">
+                <p>Are you new? Please Enter your name.</p>
+                <input type = "text" id="name">
+                <input type="submit" value="Submit" onclick="addMe()">
+        </form>
+    </body>
+
+</html
